@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:url("../Img/Background2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.logoBar{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .epic-seven-logo {
+        width: 10em;
+    }
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#link-style {
+    font-weight: 400;
+    border-bottom: 3px solid #1E90FF;
+    transition: 0.5s;
+
+    &:hover{
+        color: #ffffff;
+        background-color: #1E90FF;
+    }
+}
+
+.app-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+    body{
+        background-image:url("../Img/Background1.jpg");
+    }
+}
