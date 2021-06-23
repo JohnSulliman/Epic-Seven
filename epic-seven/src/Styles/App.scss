@@ -4,13 +4,33 @@
     box-sizing: border-box;
 }
 
-body{
+//Body Pag
+body {
     background-image:url("../Img/Background2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-.logoBar{
+//Dropdown Menu
+.dropdownMenu {
+    padding-left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+.dropdown-toggle.nav-link::after {
+    content: none;
+}
+
+//Logo and Menu
+.logoBar {
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -20,7 +40,8 @@ body{
     }
 }
 
-.navbar {
+.menu {
+    display: none;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -29,7 +50,7 @@ body{
     border-bottom: 3px solid #1E90FF;
     transition: 0.5s;
 
-    &:hover{
+    &:hover {
         color: #ffffff;
         background-color: #1E90FF;
     }
@@ -39,14 +60,22 @@ body{
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-}
-
-.container{
     background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media only screen and (min-width: 1000px) {
-    body{
+    body {
         background-image:url("../Img/Background1.jpg");
     }
+}
+
+@media only screen and (min-width: 576px) {
+    .dropdownMenu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
 }
