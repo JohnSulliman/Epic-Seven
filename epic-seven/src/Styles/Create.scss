@@ -1,0 +1,13 @@
+.btn.btn-primary{
+    background-color: #1E90FF;
+    border-color: #ffffff;
+
+    &:hover {
+        background-color: #00BFFF;
+        border-color: #ffffff;
+    }
+}
+
+.text-muted{
+    text-align: justify;
+}
