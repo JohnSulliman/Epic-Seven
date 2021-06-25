@@ -1,16 +1,18 @@
+//Component
 import { Component } from "react";
 import {Form, Button } from 'react-bootstrap';
 import { API } from '../../API/API';
+
+//Styles
 import '../../Styles/DeleteAll.scss'
 
 export class DeleteAll extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
             isLoading: false,
         }
-    }
+    };
 
     clickHandler = async event => {
         event.preventDefault();
@@ -28,17 +30,17 @@ export class DeleteAll extends Component {
         })
 
         this.goToHome()
-    }
+    };
 
     goToHome = () => {
         this.props.history.push('/')
-    }
+    };
 
     render() {
         return(
             <Form>
                 <Form.Group>
-                    <h2>Excluir</h2>
+                    <h4>Excluir</h4>
                     <Form.Label>
                         Tem certeza que deseja excluir todos os itens do banco de dados?
                         Essa ação não poderá ser revertida!
@@ -49,6 +51,5 @@ export class DeleteAll extends Component {
                 <Button className='btn' variant='primary' onClick={this.goToHome}>Cancelar</Button>
             </Form>
         );
-    }
-
-}
+    };
+};

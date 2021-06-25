@@ -1,11 +1,13 @@
+//Components
 import { Component  } from "react";
 import { Form } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import { API } from '../../API/API';
+
+//Styles
 import '../../Styles/ReadSingle.scss';
 
 export class ReadSingle extends Component {
-
     constructor(props) {
         super(props);
         this.id = this.props.match.params.id;
@@ -13,7 +15,7 @@ export class ReadSingle extends Component {
             isLoading: true,
             item: {}
         }
-    }
+    };
 
     async componentDidMount() {
         const request = await API.buildAPIGetRequest(API.readSingleUrl(this.id))
@@ -23,7 +25,7 @@ export class ReadSingle extends Component {
             isLoading: false,
             item
         })
-    }
+    };
 
     render() {
         const { item } = this.state;
@@ -41,5 +43,5 @@ export class ReadSingle extends Component {
                 <Link className='btn btn-danger' to={'/delete/' + item._id}>Excluir</Link>
             </>
         );
-    }
-}
+    };
+};

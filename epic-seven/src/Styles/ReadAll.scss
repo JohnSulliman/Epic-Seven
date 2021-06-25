@@ -1,0 +1,19 @@
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loading {
+        width: 5rem;
+
+    }
+
+    .noData {
+        font-size: 1.1rem;
+        background-color: #1E90FF;
+        color: #ffffff;
+        padding: 10px;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+    }
+}

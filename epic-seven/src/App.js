@@ -1,30 +1,31 @@
-import React from 'react'
+import React from 'react';
 
 //Components
-import {Nav, Navbar, NavDropdown, Container, Row, Col} from 'react-bootstrap'
-import {Switch, Route} from 'react-router-dom'
-import {ReadAll} from './Components/ReadAll/ReadAll'
-import {ReadSingle} from './Components/ReadSingle/ReadSingle'
-import {Create} from './Components/Create/Create'
-import {DeleteAll} from './Components/DeleteAll/DeleteAll'
-import {About} from './Components/About/About'
+import {Nav, Navbar, NavDropdown, Container, Row, Col} from 'react-bootstrap';
+import {Switch, Route} from 'react-router-dom';
+import {Create} from './Components/Create/Create';
+import {ReadAll} from './Components/ReadAll/ReadAll';
+import {ReadSingle} from './Components/ReadSingle/ReadSingle';
+import {Update} from './Components/Update/Update';
+import {DeleteAll} from './Components/DeleteAll/DeleteAll';
+import {DeleteSingle} from './Components/DeleteSingle/DeleteSingle';
+import {About} from './Components/About/About';
 
 
 //Assets
-import Logo from './Img/Logo.png'
+import Logo from './Img/Logo.png';
 
 //Styles
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './Styles/App.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Styles/App.scss';
 
 
 function App() {
   
-
   return (
     <>
-      <Navbar className='dropdownMenu' >
-        <NavDropdown title='Menu'>
+      <Navbar className='dropdownMenu'>
+        <NavDropdown title='☰'>
             <NavDropdown.Item eventKey="1" href='/'>Início</NavDropdown.Item>
             <NavDropdown.Item eventKey="2" href='/create'>Criar</NavDropdown.Item>
             <NavDropdown.Item eventKey="3" href='/delete-all'>Deletar Tudo</NavDropdown.Item>
@@ -32,7 +33,7 @@ function App() {
         </NavDropdown>
       </Navbar>
 
-        <div className='logoBar' >
+        <div className='logoBar'>
           <img className='epic-seven-logo' src={Logo} alt='epic-seven-logo' />
         </div>
 
@@ -49,11 +50,13 @@ function App() {
         <Row>
           <Col>
             <Switch>
-              <Route path='/' exact={true} component={ReadAll}></Route>
-              <Route path='/create' component={Create}></Route>
-              <Route path='/delete-all' component={DeleteAll}></Route>
-              <Route path='/about' component={About}></Route>
-              <Route path='/view/:id' component={ReadSingle}></Route>
+              <Route path='/' exact={true} component={ReadAll} />
+              <Route path='/create' component={Create} />
+              <Route path='/view/:id' component={ReadSingle} />
+              <Route path='/update/:id' component={Update} />
+              <Route path='/delete-all' component={DeleteAll} />
+              <Route path='/delete/:id' component={DeleteSingle} />
+              <Route path='/about' component={About} />
             </Switch>
           </Col>
         </Row>
