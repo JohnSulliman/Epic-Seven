@@ -11,7 +11,6 @@ import {DeleteAll} from './Components/DeleteAll/DeleteAll';
 import {DeleteSingle} from './Components/DeleteSingle/DeleteSingle';
 import {About} from './Components/About/About';
 
-
 //Assets
 import Logo from './Img/Logo.png';
 
