@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import {Card, Button} from 'react-bootstrap';
+import {Form, Button} from 'react-bootstrap';
+import FormFileLabel from 'react-bootstrap/esm/FormFileLabel';
 import {API} from '../../API/API'
 
 //Styles
@@ -43,17 +44,17 @@ export class DeleteSingle extends Component {
 
     render() {
         return(
-            <Card>
-                <Card.Body>
-                    <Card.Title>Excluir Item</Card.Title>
-
-                    <Card.Text>
+            <Form>
+                <Form.Group>
+                    <h4>Excluir Item</h4>
+                    <Form.Label>
                         Tem certeza que deseja excluir o item selecionado?
-                    </Card.Text>
-                    <Button className='btn' variant='danger' onClick={this.clickHandler}>Excluir</Button>
-                    <Button className='btn' variant='primary' onClick={this.goToView}>Cancelar</Button>
-                </Card.Body>
-            </Card>
+                        Essa ação não poderá ser revertida!
+                    </Form.Label>
+                </Form.Group>
+                <Button className='btn' variant='danger' onClick={this.clickHandler}>Excluir</Button>
+                <Button className='btn' variant='primary' onClick={this.goToView}>Cancelar</Button>
+            </Form>
         );
     };
 };
